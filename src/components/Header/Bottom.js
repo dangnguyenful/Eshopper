@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 const Bottom = () => (
 	<div class="header-bottom">
 		<div class="container">
@@ -14,14 +15,14 @@ const Bottom = () => (
 					</div>
 					<div class="mainmenu pull-left">
 						<ul class="nav navbar-nav collapse navbar-collapse">
-							<li><a href="index.html" class="active">Home</a></li>
+							<li><Link to='/'>Home</Link></li>
 							<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="shop.html">Products</a></li>
 									<li><a href="product-details.html">Product Details</a></li> 
 									<li><a href="checkout.html">Checkout</a></li> 
 									<li><a href="cart.html">Cart</a></li> 
-									<li><a href="login.html">Login</a></li> 
+									<li><Link to='/login'>Login</Link></li> 
                                 </ul>
                             </li> 
 							<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
