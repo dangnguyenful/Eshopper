@@ -11,7 +11,7 @@ const Product = () => (
 							<div className="panel panel-default">
 								<div className="panel-heading">
 									<h4 className="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+										<a data-toggle="collapse" data-parent="/accordian" href="/sportswear">
 											<span className="badge pull-right"><i className="fa fa-plus"></i></span>
 											Sportswear
 										</a>
@@ -32,7 +32,7 @@ const Product = () => (
 							<div className="panel panel-default">
 								<div className="panel-heading">
 									<h4 className="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+										<a data-toggle="collapse" data-parent="/accordian" href="/mens">
 											<span className="badge pull-right"><i className="fa fa-plus"></i></span>
 											Mens
 										</a>
@@ -59,7 +59,7 @@ const Product = () => (
 							<div className="panel panel-default">
 								<div className="panel-heading">
 									<h4 className="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="/accordian" href="/womens">
 											<span className="badge pull-right"><i className="fa fa-plus"></i></span>
 											Womens
 										</a>
@@ -299,11 +299,11 @@ const Product = () => (
 					<div className="category-tab">
 						<div className="col-sm-12">
 							<ul className="nav nav-tabs">
-								<li className="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
-								<li><a href="#blazers" data-toggle="tab">Blazers</a></li>
-								<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
-								<li><a href="#kids" data-toggle="tab">Kids</a></li>
-								<li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
+								<li className="active"><a href="/tshirt" data-toggle="tab">T-Shirt</a></li>
+								<li><a href="/blazers" data-toggle="tab">Blazers</a></li>
+								<li><a href="/sunglass" data-toggle="tab">Sunglass</a></li>
+								<li><a href="/kids" data-toggle="tab">Kids</a></li>
+								<li><a href="/poloshirt" data-toggle="tab">Polo shirt</a></li>
 							</ul>
 						</div>
 						<div className="tab-content">
@@ -672,10 +672,10 @@ const Product = () => (
 									</div>
 								</div>
 							</div>
-							 <a className="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+							 <a className="left recommended-item-control" href="/recommended-item-carousel" data-slide="prev">
 								<i className="fa fa-angle-left"></i>
 							  </a>
-							  <a className="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+							  <a className="right recommended-item-control" href="/recommended-item-carousel" data-slide="next">
 								<i className="fa fa-angle-right"></i>
 							  </a>			
 						</div>
