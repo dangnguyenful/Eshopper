@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const Login = () => (
 	<section id="form">
@@ -7,7 +7,7 @@ const Login = () => (
 				<div className="col-sm-4 col-sm-offset-1">
 					<div className="login-form">
 						<h2>Login to your account</h2>
-						<form action="#">
+						<form action="/">
 							<input type="text" placeholder="Name" />
 							<input type="email" placeholder="Email Address" />
 							<span>
@@ -24,7 +24,7 @@ const Login = () => (
 				<div className="col-sm-4">
 					<div className="signup-form">
 						<h2>New User Signup!</h2>
-						<form action="#">
+						<form action="/">
 							<input type="text" placeholder="Name"/>
 							<input type="email" placeholder="Email Address"/>
 							<input type="password" placeholder="Password"/>

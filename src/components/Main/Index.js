@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Switch, Route, Redirect, DefaultRoute } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from '../Page/Index'
 import Login from '../Page/Login'
 import NotFound from '../Page/NotFound'

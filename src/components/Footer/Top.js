@@ -12,7 +12,7 @@ const Top = () => (
 				<div className="col-sm-7">
 					<div className="col-sm-3">
 						<div className="video-gallery text-center">
-							<a href="#">
+							<a href="/">
 								<div className="iframe-img">
 									<img src="images/home/iframe1.png" alt="" />
 								</div>
@@ -27,7 +27,7 @@ const Top = () => (
 					
 					<div className="col-sm-3">
 						<div className="video-gallery text-center">
-							<a href="#">
+							<a href="/">
 								<div className="iframe-img">
 									<img src="images/home/iframe2.png" alt="" />
 								</div>
@@ -42,7 +42,7 @@ const Top = () => (
 					
 					<div className="col-sm-3">
 						<div className="video-gallery text-center">
-							<a href="#">
+							<a href="/">
 								<div className="iframe-img">
 									<img src="images/home/iframe3.png" alt="" />
 								</div>
@@ -57,7 +57,7 @@ const Top = () => (
 					
 					<div className="col-sm-3">
 						<div className="video-gallery text-center">
-							<a href="#">
+							<a href="/">
 								<div className="iframe-img">
 									<img src="images/home/iframe4.png" alt="" />
 								</div>

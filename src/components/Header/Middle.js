@@ -14,8 +14,8 @@ const Middle = () => (
 								<span className="caret"></span>
 							</button>
 							<ul className="dropdown-menu">
-								<li><a href="#">Canada</a></li>
-								<li><a href="#">UK</a></li>
+								<li><a href="/">Canada</a></li>
+								<li><a href="/">UK</a></li>
 							</ul>
 						</div>
 						
@@ -25,8 +25,8 @@ const Middle = () => (
 								<span className="caret"></span>
 							</button>
 							<ul className="dropdown-menu">
-								<li><a href="#">Canadian Dollar</a></li>
-								<li><a href="#">Pound</a></li>
+								<li><a href="/">Canadian Dollar</a></li>
+								<li><a href="/">Pound</a></li>
 							</ul>
 						</div>
 					</div>
@@ -34,8 +34,8 @@ const Middle = () => (
 				<div className="col-sm-8">
 					<div className="shop-menu pull-right">
 						<ul className="nav navbar-nav">
-							<li><a href="#"><i className="fa fa-user"></i> Account</a></li>
-							<li><a href="#"><i className="fa fa-star"></i> Wishlist</a></li>
+							<li><a href="/"><i className="fa fa-user"></i> Account</a></li>
+							<li><a href="/"><i className="fa fa-star"></i> Wishlist</a></li>
 							<li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
 							<li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
 							<li><a href="login.html"><i className="fa fa-lock"></i> Login</a></li>
