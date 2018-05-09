@@ -4,7 +4,7 @@ const CategoryProducts = () => (
 		<div className="panel panel-default">
 			<div className="panel-heading">
 				<h4 className="panel-title">
-					<a data-toggle="collapse" data-parent="/accordian" href="/sportswear">
+					<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
 						<span className="badge pull-right"><i className="fa fa-plus"></i></span>
 						Sportswear
 					</a>
@@ -25,7 +25,7 @@ const CategoryProducts = () => (
 		<div className="panel panel-default">
 			<div className="panel-heading">
 				<h4 className="panel-title">
-					<a data-toggle="collapse" data-parent="/accordian" href="/mens">
+					<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 						<span className="badge pull-right"><i className="fa fa-plus"></i></span>
 						Mens
 					</a>
@@ -52,7 +52,7 @@ const CategoryProducts = () => (
 		<div className="panel panel-default">
 			<div className="panel-heading">
 				<h4 className="panel-title">
-					<a data-toggle="collapse" data-parent="/accordian" href="/womens">
+					<a data-toggle="collapse" data-parent="#accordian" href="#womens">
 						<span className="badge pull-right"><i className="fa fa-plus"></i></span>
 						Womens
 					</a>

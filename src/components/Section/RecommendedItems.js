@@ -88,10 +88,10 @@ const RecommendedItems = () => (
 					</div>
 				</div>
 			</div>
-			 <a className="left recommended-item-control" href="/recommended-item-carousel" data-slide="prev">
+			 <a className="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
 				<i className="fa fa-angle-left"></i>
 			  </a>
-			  <a className="right recommended-item-control" href="/recommended-item-carousel" data-slide="next">
+			  <a className="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
 				<i className="fa fa-angle-right"></i>
 			  </a>			
 		</div>
