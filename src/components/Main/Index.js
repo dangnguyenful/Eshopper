@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import Home from '../Page/Index'
 import NotFound from '../Page/NotFound'
@@ -25,7 +25,6 @@ const Index = () => (
 			<Route path='/blog' component={Blog}/>
 			<Route path='/blog-single' component={BlogSingle}/>
 			<Route path='*' component={NotFound}/>
-			{/*<Redirect from={'/'} to={'/not-found'} />*/}
 		</Switch>
 	</main>
 );
