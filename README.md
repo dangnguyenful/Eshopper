@@ -1,4 +1,4 @@
-Template source from : http://www.free-css.com
+Template source from : http://www.free-css.com/free-css-templates/page203/e-shopper
 
 To run this example:
 
