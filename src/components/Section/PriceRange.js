@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
-import $ from 'jquery'
 export default class PriceRange extends Component {
 	componentDidMount() {
-		console.log($);
+		window.$('#sl2').slider();
 	}
 	render() {
 		return (
