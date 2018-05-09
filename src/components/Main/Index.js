@@ -12,8 +12,8 @@ const Index = () => (
 			<Route exact path='/' component={Home}/>
 			<Route path='/login' component={Login}/>
 			<Route path='/contact-us' component={Contact}/>
-			<Route path='/not-found' component={NotFound}/>
-			<Redirect from={'/'} to={'/not-found'} />
+			<Route path='*' component={NotFound}/>
+			{/*<Redirect from={'/'} to={'/not-found'} />*/}
 		</Switch>
 	</main>
 );

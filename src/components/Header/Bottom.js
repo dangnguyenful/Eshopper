@@ -18,20 +18,20 @@ const Bottom = () => (
 							<li><Link to='/'>Home</Link></li>
 							<li className="dropdown"><a href="/">Shop<i className="fa fa-angle-down"></i></a>
                                 <ul role="menu" className="sub-menu">
-                                    <li><a href="shop.html">Products</a></li>
-									<li><a href="product-details.html">Product Details</a></li> 
-									<li><a href="checkout.html">Checkout</a></li> 
-									<li><a href="cart.html">Cart</a></li> 
+                                    <li><Link to="/shop">Products</Link></li>
+									<li><Link to="/product-details">Product Details</Link></li> 
+									<li><Link to="/checkout">Checkout</Link></li> 
+									<li><Link to="/cart">Cart</Link></li> 
 									<li><Link to='/login'>Login</Link></li> 
                                 </ul>
                             </li> 
 							<li className="dropdown"><a href="/">Blog<i className="fa fa-angle-down"></i></a>
                                 <ul role="menu" className="sub-menu">
-                                    <li><a href="blog.html">Blog List</a></li>
-									<li><a href="blog-single.html">Blog Single</a></li>
+                                    <li><Link to="/blog">Blog List</Link></li>
+									<li><Link to="/blog-single">Blog Single</Link></li>
                                 </ul>
                             </li> 
-							<li><a href="/contact-us">Contact</a></li>
+							<li><Link to="/contact-us">Contact</Link></li>
 						</ul>
 					</div>
 				</div>
