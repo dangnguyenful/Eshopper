@@ -31,7 +31,7 @@ const Bottom = () => (
 									<li><a href="blog-single.html">Blog Single</a></li>
                                 </ul>
                             </li> 
-							<li><a href="contact-us.html">Contact</a></li>
+							<li><a href="/contact-us">Contact</a></li>
 						</ul>
 					</div>
 				</div>
