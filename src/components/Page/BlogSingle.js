@@ -78,37 +78,37 @@ const BlogSingle = () => (
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Kids</a></h4>
+									<h4 class="panel-title"><a href="/">Kids</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Fashion</a></h4>
+									<h4 class="panel-title"><a href="/">Fashion</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Households</a></h4>
+									<h4 class="panel-title"><a href="/">Households</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Interiors</a></h4>
+									<h4 class="panel-title"><a href="/">Interiors</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Clothing</a></h4>
+									<h4 class="panel-title"><a href="/">Clothing</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Bags</a></h4>
+									<h4 class="panel-title"><a href="/">Bags</a></h4>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Shoes</a></h4>
+									<h4 class="panel-title"><a href="/">Shoes</a></h4>
 								</div>
 							</div>
 						</div>
@@ -177,8 +177,8 @@ const BlogSingle = () => (
 							</p>
 							<div class="pager-area">
 								<ul class="pager pull-right">
-									<li><a href="#">Pre</a></li>
-									<li><a href="#">Next</a></li>
+									<li><a href="/">Pre</a></li>
+									<li><a href="/">Next</a></li>
 								</ul>
 							</div>
 						</div>
@@ -209,7 +209,7 @@ const BlogSingle = () => (
 					</div>
 
 					<div class="media commnets">
-						<a class="pull-left" href="#">
+						<a class="pull-left" href="/">
 							<img class="media-object" src="images/blog/man-one.jpg" alt="" />
 						</a>
 						<div class="media-body">
@@ -231,7 +231,7 @@ const BlogSingle = () => (
 						<ul class="media-list">
 							<li class="media">
 								
-								<a class="pull-left" href="#">
+								<a class="pull-left" href="/">
 									<img class="media-object" src="images/blog/man-two.jpg" alt="" />
 								</a>
 								<div class="media-body">
@@ -245,7 +245,7 @@ const BlogSingle = () => (
 								</div>
 							</li>
 							<li class="media second-media">
-								<a class="pull-left" href="#">
+								<a class="pull-left" href="/">
 									<img class="media-object" src="images/blog/man-three.jpg" alt="" />
 								</a>
 								<div class="media-body">
@@ -259,7 +259,7 @@ const BlogSingle = () => (
 								</div>
 							</li>
 							<li class="media">
-								<a class="pull-left" href="#">
+								<a class="pull-left" href="/">
 									<img class="media-object" src="images/blog/man-four.jpg" alt="" />
 								</a>
 								<div class="media-body">

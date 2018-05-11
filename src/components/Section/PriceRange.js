@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
+import shop from '../../api/shop'
 export default class PriceRange extends Component {
 	componentDidMount() {
 		window.$('#sl2').slider();
+		shop.getProducts(products => {
+		    console.log(products)
+	  	})
 	}
 	render() {
 		return (
