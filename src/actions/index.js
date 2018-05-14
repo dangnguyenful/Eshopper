@@ -1,4 +1,4 @@
-import {getAllProducts} from './products';
+import {getAllProducts} from './products'
 
 export {
 	getAllProducts

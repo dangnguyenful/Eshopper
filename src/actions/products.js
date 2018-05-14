@@ -1,8 +1,13 @@
-import {ActionTypes} from '../constants/ActionTypes';
+import {ActionTypes} from '../constants/ActionTypes'
+import shop from '../api/shop'
 
-export function getAllProducts(products) {
-	return {
-		type: ActionTypes.RECEIVE_PRODUCTS,
-		products
-	};
-};
+const receiveProducts = products => ({
+	type: ActionTypes.RECEIVE_PRODUCTS,
+	products
+})
+
+export const getAllProducts = () => dispatch => {
+	shop.getProducts(products => {
+		dispatch(receiveProducts(products))
+	})
+}
