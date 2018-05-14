@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+
 export default class PriceRange extends Component {
 	componentDidMount() {
 		window.$('#sl2').slider();
