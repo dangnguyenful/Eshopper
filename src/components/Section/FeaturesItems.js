@@ -1,6 +1,8 @@
 import React from 'react'
+import ProductsContainer from '../../containers/ProductsContainer'
 const FeaturesItems = () => (
 	<div className="features_items">
+	<ProductsContainer/>
 		<h2 className="title text-center">Features Items</h2>
 		<div className="col-sm-4">
 			<div className="product-image-wrapper">

@@ -2,16 +2,14 @@ import {ActionTypes} from '../constants/ActionTypes'
 
 const initialState = [];
 
-export default function(state = initialState, action) {
+export const getAllProducts = function(state = initialState, action) {
 	switch (action.type) {
 		case ActionTypes.RECEIVE_PRODUCTS:
-				return getAllProducts(state, action);
+			return [{title:'c'},{title:'d'}];
 		default:
 			return state
 	}
 }
 
-function getAllProducts(state, action) {
-  const {products} = action;
-  return [...state, ...products];
-}
+export default getAllProducts
+
