@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { getAllProducts } from '../actions'
 import { connect } from 'react-redux'
-import ProductsList from './ProductsList'
+import ProductsList from '../components/Template/ProductList'
 
 const mapStateToProps = state => ({
   products: state.getAllProducts

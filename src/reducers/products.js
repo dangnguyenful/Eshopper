@@ -1,5 +1,4 @@
 import {ActionTypes} from '../constants/ActionTypes'
-import shop from '../api/shop'
 
 const initialState = [];
 
