@@ -2,16 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ProductItem from './ProductItem'
 
-const ProductsList = ({ products }) => (
-  <div>
-    {products.map(product =>
-  		<ProductItem
-  		key={product.id}
-  		{...product}
-  		/>
-    )}
-  </div>
-)
+const ProductsList = ({ products, startPage, itemPerPage }) => {
+  var productNeedToLoad = products.slice(parseInt(startPage-1), parseInt(itemPerPage))
+  return (
+    <div>
+      {productNeedToLoad.map(product =>
+    		<ProductItem
+    		key={product.id}
+    		{...product}
+    		/>
+      )}
+    </div>
+  )
+}
 
 ProductsList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
