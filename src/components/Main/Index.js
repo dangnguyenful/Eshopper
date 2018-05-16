@@ -1,16 +1,16 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from '../Page/Index'
-import NotFound from '../Page/NotFound'
-import Login from '../Page/Login'
-import Cart from '../Page/Cart'
-import Shop from '../Page/Shop'
-import Checkout from '../Page/Checkout'
-import Contact from '../Page/Contact'
-import Product from '../Page/Product'
-import Blog from '../Page/Blog'
-import BlogSingle from '../Page/BlogSingle'
+import Home from '../Pages/Index'
+import NotFound from '../Pages/NotFound'
+import Login from '../Pages/Login'
+import Cart from '../Pages/Cart'
+import Shop from '../Pages/Shop'
+import Checkout from '../Pages/Checkout'
+import Contact from '../Pages/Contact'
+import Product from '../Pages/Product'
+import Blog from '../Pages/Blog'
+import BlogSingle from '../Pages/BlogSingle'
 
 const Index = () => (
 	<main>

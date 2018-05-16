@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from '../Section/Login'
+import Login from '../Sections/Login'
 
 const LoginPage = () => (
 	<Login/>

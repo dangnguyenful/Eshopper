@@ -1,6 +1,6 @@
 import React from 'react'
-import Slider from '../Section/Slider'
-import Product from '../Section/Product'
+import Slider from '../Sections/Slider'
+import Product from '../Sections/Product'
 
 const Index = () => (
 	<div>

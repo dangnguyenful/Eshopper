@@ -3,19 +3,22 @@ import PropTypes from 'prop-types'
 import ProductItem from './ProductItem'
 
 const ProductsList = ({ products }) => (
-  <ul>
+  <div>
     {products.map(product =>
   		<ProductItem
-  		key={product.title}
+  		key={product.id}
   		{...product}
   		/>
     )}
-  </ul>
+  </div>
 )
 
 ProductsList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired
   }).isRequired).isRequired
 }
 
