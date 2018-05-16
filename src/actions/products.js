@@ -1,5 +1,13 @@
 import {ActionTypes} from '../constants/ActionTypes'
-export const getAllProducts = products => ({
+import shop from '../api/shop'
+
+const receiveProducts = products => ({
   type: ActionTypes.RECEIVE_PRODUCTS,
   products
 })
+
+export const getAllProducts = () => dispatch => {
+  shop.getProducts(products => {
+    dispatch(receiveProducts(products))
+  })
+}

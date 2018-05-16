@@ -16,7 +16,7 @@ const store = createStore(
 	reducer,
 	applyMiddleware(...middleware)
 )
-// store.dispatch(getAllProducts())
+store.dispatch(getAllProducts())
 const render = () => ReactDOM.render(
 	<Provider store={store}>
 	   	<BrowserRouter>

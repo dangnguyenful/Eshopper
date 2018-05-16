@@ -5,14 +5,9 @@ import { connect } from 'react-redux'
 import ProductsList from './ProductsList'
 
 const mapStateToProps = state => ({
-  products: [{title:'a'}, {title:'b'}]
-})
-
-const mapDispatchToProps = dispatch => ({
-  getAllProducts: products => dispatch(getAllProducts(products))
+  products: state.getAllProducts
 })
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(ProductsList)
