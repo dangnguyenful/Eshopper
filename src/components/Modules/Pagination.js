@@ -2,15 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Pagination = ({ currentPage, itemPerPage, totalPage }) => {
+	var totalObject = [];
+	for (var i = 1; i <= totalPage; i++) {
+		totalObject.push({
+			number: i,
+			active: i === currentPage ? true : false
+		})
+	}
 	return (
 		<ul className="pagination">
-			{currentPage}
-			{itemPerPage}
-			{totalPage}
-			{/*<li className="active"><a href="">1</a></li>
-			<li><a href="">2</a></li>
-			<li><a href="">3</a></li>
-			<li><a href="">&raquo;</a></li>*/}
+			{totalObject.map(page =>
+				<li key={page.number} className={page.active ? 'active' : null}><a href="">{page.number}</a></li>
+			)}
+			<li><a href="">&raquo;</a></li>
 		</ul>
 	)
 }

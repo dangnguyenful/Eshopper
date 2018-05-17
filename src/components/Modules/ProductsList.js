@@ -4,7 +4,8 @@ import ProductItem from './ProductItem'
 import Pagination from './Pagination'
 import paging from '../../utilities/paging'
 
-const ProductsList = ({ products, currentPage, itemPerPage, totalPage }) => {
+const ProductsList = ({ products, currentPage, itemPerPage }) => {
+  let totalPage = (products.length/itemPerPage)
   return (
     <div>
       {paging(products, currentPage, itemPerPage).map(product =>
