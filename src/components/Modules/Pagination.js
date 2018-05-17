@@ -13,7 +13,7 @@ const Pagination = ({ currentPage, itemPerPage, totalPage, changePaging }) => {
 	return (
 		<ul className="pagination">
 			{totalObject.map(page =>
-				<li key={page.number} className={page.active ? 'active' : null} onClick={() => changePaging(page.number)}><a href="javascript:void(0)">{page.number}</a></li>
+				<li key={page.number} className={page.active ? 'active' : null} onClick={() => changePaging(page.number, itemPerPage)}><a href="javascript:void(0)">{page.number}</a></li>
 			)}
 			<li><a href="">&raquo;</a></li>
 		</ul>

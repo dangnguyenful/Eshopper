@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  changePaging: newPage => dispatch(changePaging(newPage))
+  changePaging: (newPage, itemPerPage) => dispatch(changePaging(newPage, itemPerPage))
 })
 
 export default connect(

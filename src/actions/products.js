@@ -6,9 +6,10 @@ const receiveProducts = products => ({
 	products
 })
 
-const changePaging = newPage => ({
+export const changePaging = (newPage, itemPerPage) => ({
 	type: ActionTypes.CHANGE_PAGING,
-	newPage
+	newPage,
+	itemPerPage
 })
 
 export const getAllProducts = () => dispatch => {

@@ -8,7 +8,7 @@ const getAllProducts = function(state = initialState, action) {
 		case ActionTypes.RECEIVE_PRODUCTS:
 			return action.products
 		case ActionTypes.CHANGE_PAGING:
-			return action.products
+			return state
 		default:
 			return state
 	}
