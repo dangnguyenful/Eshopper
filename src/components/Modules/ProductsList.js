@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ProductItem from './ProductItem'
 
-const ProductsList = ({ products, startPage, itemPerPage }) => {
-  let productNeedToLoad = products.slice((startPage-1)*itemPerPage, startPage*itemPerPage)
+const ProductsList = ({ products, currentPage, itemPerPage }) => {
   return (
     <div>
-      {productNeedToLoad.map(product =>
+      {products.map(product =>
     		<ProductItem
     		key={product.id}
     		{...product}
@@ -22,7 +21,10 @@ ProductsList.propTypes = {
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired
-  }).isRequired).isRequired
+  }).isRequired).isRequired,
+  currentPage: PropTypes.string,
+  itemPerPage: PropTypes.string,
+  totalPage: PropTypes.string
 }
 
 export default ProductsList
