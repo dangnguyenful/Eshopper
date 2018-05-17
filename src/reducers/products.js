@@ -1,5 +1,4 @@
 import {ActionTypes} from '../constants/ActionTypes'
-import paging from '../utilities/paging'
 
 const initialState = {
 	products: [],
@@ -11,7 +10,7 @@ const getAllProducts = function(state = initialState, action) {
 	switch (action.type) {
 		case ActionTypes.RECEIVE_PRODUCTS:
 			return {
-				products: paging(action.products, state.currentPage, state.itemPerPage),
+				products: action.products,
 				currentPage: state.currentPage,
 				itemPerPage: state.itemPerPage,
 				totalPage: action.products.length/state.itemPerPage

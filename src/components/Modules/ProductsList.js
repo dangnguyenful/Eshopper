@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ProductItem from './ProductItem'
+import Pagination from './Pagination'
+import paging from '../../utilities/paging'
 
-const ProductsList = ({ products, currentPage, itemPerPage }) => {
+const ProductsList = ({ products, currentPage, itemPerPage, totalPage }) => {
   return (
     <div>
-      {products.map(product =>
+      {paging(products, currentPage, itemPerPage).map(product =>
     		<ProductItem
     		key={product.id}
     		{...product}
     		/>
       )}
+      <Pagination currentPage={currentPage} itemPerPage={itemPerPage} totalPage={totalPage}/>
     </div>
   )
 }
