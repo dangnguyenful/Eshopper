@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ProductItem from './ProductItem'
 
 const ProductsList = ({ products, startPage, itemPerPage }) => {
-  var productNeedToLoad = products.slice(parseInt(startPage-1), parseInt(itemPerPage))
+  let productNeedToLoad = products.slice((startPage-1)*itemPerPage, startPage*itemPerPage)
   return (
     <div>
       {productNeedToLoad.map(product =>
