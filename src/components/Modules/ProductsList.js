@@ -25,9 +25,9 @@ ProductsList.propTypes = {
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired
   }).isRequired).isRequired,
-  currentPage: PropTypes.string,
-  itemPerPage: PropTypes.string,
-  totalPage: PropTypes.string
+  currentPage: PropTypes.number,
+  itemPerPage: PropTypes.number,
+  totalPage: PropTypes.number
 }
 
 export default ProductsList

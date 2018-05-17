@@ -3,7 +3,8 @@ import {ActionTypes} from '../constants/ActionTypes'
 const initialState = {
 	products: [],
 	currentPage: 1,
-	itemPerPage: 9
+	itemPerPage: 9,
+	totalPage: 0
 };
 
 const getAllProducts = function(state = initialState, action) {
@@ -13,7 +14,7 @@ const getAllProducts = function(state = initialState, action) {
 				products: action.products,
 				currentPage: state.currentPage,
 				itemPerPage: state.itemPerPage,
-				totalPage: action.products.length/state.itemPerPage
+				totalPage: (action.products.length/state.itemPerPage)
 			};
 		default:
 			return state
