@@ -1,11 +1,9 @@
 import { connect } from 'react-redux'
 import ProductsList from '../components/Modules/ProductsList'
+import { getAllProducts } from '../actions'
 
 const mapStateToProps = state => ({
-	products: state.getAllProducts.products,
-	itemPerPage: state.getAllProducts.itemPerPage,
-	currentPage: state.getAllProducts.currentPage,
-	totalPage: state.getAllProducts.totalPage
+	products: state.getAllProducts
 })
 
 export default connect(
