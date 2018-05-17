@@ -1,4 +1,5 @@
-import {getAllProducts} from './products'
+import {getAllProducts, changePaging} from './products'
 export {
-	getAllProducts
+	getAllProducts,
+	changePaging
 };

@@ -1,11 +1,16 @@
 import { connect } from 'react-redux'
 import ProductsList from '../components/Modules/ProductsList'
-import { getAllProducts } from '../actions'
+import { getAllProducts, changePaging } from '../actions'
 
 const mapStateToProps = state => ({
 	products: state.getAllProducts
 })
 
+const mapDispatchToProps = dispatch => ({
+  changePaging: newPage => dispatch(changePaging(newPage))
+})
+
 export default connect(
-	mapStateToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(ProductsList)
