@@ -8,8 +8,8 @@ export const receiveProducts = (products, currentPage, itemPerPage) => ({
 	itemPerPage
 })
 
-export const getAllProducts = (currentPage, itemPerPage) => dispatch => {
+export const getAllProducts = () => dispatch => {
 	shop.getProducts(products => {
-		dispatch(receiveProducts(products, currentPage, itemPerPage))
+		dispatch(receiveProducts(products))
 	})
 }
