@@ -5,8 +5,8 @@ import Pagination from './Pagination'
 import paging from '../../utilities/paging'
 
 const ProductsList = ({ products, currentPage, itemPerPage, receiveProducts }) => {
-  let lastPage = (products.length % itemPerPage) !== 0 ? 1 : 0,
-      totalPage = (products.length/itemPerPage) + lastPage,
+  let lastPageNumber = (products.length % itemPerPage) !== 0 ? 1 : 0,
+      totalPage = (products.length/itemPerPage) + lastPageNumber,
       currentProducts = currentPage && itemPerPage ? paging(products, currentPage, itemPerPage) : products
   return (
     <div>
