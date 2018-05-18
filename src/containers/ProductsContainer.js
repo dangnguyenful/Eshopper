@@ -1,13 +1,18 @@
 import { connect } from 'react-redux'
 import ProductsList from '../components/Modules/ProductsList'
-import { getAllProducts, changePaging } from '../actions'
+import { getAllProducts, receiveProducts } from '../actions'
+
+const getVisibleProduct = (state) => {
+	console.log(state)
+  	return state.getAllProducts
+}
 
 const mapStateToProps = state => ({
-	products: state.getAllProducts
+	products: getVisibleProduct(state)
 })
 
 const mapDispatchToProps = dispatch => ({
-  changePaging: (newPage, itemPerPage) => dispatch(changePaging(newPage, itemPerPage))
+	receiveProducts: (products, currentPage, itemPerPage) => dispatch(receiveProducts(products, currentPage, itemPerPage))
 })
 
 export default connect(

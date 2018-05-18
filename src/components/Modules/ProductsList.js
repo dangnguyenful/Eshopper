@@ -4,17 +4,18 @@ import ProductItem from './ProductItem'
 import Pagination from './Pagination'
 import paging from '../../utilities/paging'
 
-const ProductsList = ({ products, currentPage, itemPerPage, changePaging }) => {
-  let totalPage = (products.length/itemPerPage)
+const ProductsList = ({ products, currentPage, itemPerPage, receiveProducts }) => {
+  let totalPage = (products.length/itemPerPage),
+      currentProducts = currentPage && itemPerPage ? paging(products, currentPage, itemPerPage) : products
   return (
     <div>
-      {paging(products, currentPage, itemPerPage).map(product =>
+      {currentProducts.map(product =>
     		<ProductItem
     		key={product.id}
     		{...product}
     		/>
       )}
-      <Pagination currentPage={currentPage} itemPerPage={itemPerPage} totalPage={totalPage} changePaging={changePaging}/>
+      <Pagination currentPage={currentPage} itemPerPage={itemPerPage} totalPage={totalPage} receiveProducts={receiveProducts} products={products}/>
     </div>
   )
 }
@@ -29,7 +30,7 @@ ProductsList.propTypes = {
   currentPage: PropTypes.number,
   itemPerPage: PropTypes.number,
   totalPage: PropTypes.number,
-  changePaging: PropTypes.func
+  receiveProducts: PropTypes.func
 }
 
 export default ProductsList

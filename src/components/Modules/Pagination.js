@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { changePaging } from '../../actions'
 
-const Pagination = ({ currentPage, itemPerPage, totalPage, changePaging }) => {
+const Pagination = ({ products, currentPage, itemPerPage, totalPage, receiveProducts }) => {
 	var totalObject = [];
 	for (var i = 1; i <= totalPage; i++) {
 		totalObject.push({
@@ -13,7 +12,7 @@ const Pagination = ({ currentPage, itemPerPage, totalPage, changePaging }) => {
 	return (
 		<ul className="pagination">
 			{totalObject.map(page =>
-				<li key={page.number} className={page.active ? 'active' : null} onClick={() => changePaging(page.number, itemPerPage)}><a href="javascript:void(0)">{page.number}</a></li>
+				<li key={page.number} className={page.active ? 'active' : null} onClick={() => receiveProducts(products, page.number, itemPerPage)}><a href="javascript:void(0)">{page.number}</a></li>
 			)}
 			<li><a href="">&raquo;</a></li>
 		</ul>
@@ -21,10 +20,11 @@ const Pagination = ({ currentPage, itemPerPage, totalPage, changePaging }) => {
 }
 
 Pagination.propTypes = {
+	products: PropTypes.array,
 	currentPage: PropTypes.number,
 	itemPerPage: PropTypes.number,
 	totalPage: PropTypes.number,
-	changePaging: PropTypes.func
+	receiveProducts: PropTypes.func
 }
 
 export default Pagination

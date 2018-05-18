@@ -1,19 +1,15 @@
 import {ActionTypes} from '../constants/ActionTypes'
 import shop from '../api/shop'
 
-const receiveProducts = products => ({
+export const receiveProducts = (products, currentPage, itemPerPage) => ({
 	type: ActionTypes.RECEIVE_PRODUCTS,
-	products
-})
-
-export const changePaging = (newPage, itemPerPage) => ({
-	type: ActionTypes.CHANGE_PAGING,
-	newPage,
+	products,
+	currentPage,
 	itemPerPage
 })
 
-export const getAllProducts = () => dispatch => {
+export const getAllProducts = (currentPage, itemPerPage) => dispatch => {
 	shop.getProducts(products => {
-		dispatch(receiveProducts(products))
+		dispatch(receiveProducts(products, currentPage, itemPerPage))
 	})
 }

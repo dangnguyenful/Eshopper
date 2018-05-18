@@ -1,5 +1,5 @@
-import {getAllProducts, changePaging} from './products'
+import { getAllProducts, receiveProducts } from './products'
 export {
 	getAllProducts,
-	changePaging
+	receiveProducts
 };
