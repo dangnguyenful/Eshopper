@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProductsList from '../components/Modules/ProductsList'
-import { receiveProducts } from '../actions'
+import { receiveProducts } from '../actions/products'
 
 const applyFilter = (state) => {
 	var allProducts = {products: state.getAllProducts.products};
