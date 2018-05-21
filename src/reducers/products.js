@@ -1,5 +1,4 @@
 import {ActionTypes} from '../constants/ActionTypes'
-import paging from '../utilities/paging'
 
 const initialState = {
 	products: [],

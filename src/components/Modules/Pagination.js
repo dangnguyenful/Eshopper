@@ -31,11 +31,11 @@ const Pagination = ({ products, currentPage, itemPerPage, totalPage, receiveProd
 	
 	return (
 		<ul className="pagination">
-			<li style={prevBtn} onClick={() => receiveProducts(products, prevNumber, itemPerPage)}><a href="javascript:void(0)">&laquo;</a></li>
+			<li style={prevBtn} onClick={() => receiveProducts(products, prevNumber, itemPerPage)}><a href="no-script-url">&laquo;</a></li>
 			{totalObject.map(page =>
-				<li key={page.number} className={page.active ? 'active' : null} onClick={() => receiveProducts(products, page.number, itemPerPage)}><a href="javascript:void(0)">{page.number}</a></li>
+				<li key={page.number} className={page.active ? 'active' : null} onClick={() => receiveProducts(products, page.number, itemPerPage)}><a href="no-script-url">{page.number}</a></li>
 			)}
-			<li style={nextBtn} onClick={() => receiveProducts(products, nextNumber, itemPerPage)}><a href="javascript:void(0)">&raquo;</a></li>
+			<li style={nextBtn} onClick={() => receiveProducts(products, nextNumber, itemPerPage)}><a href="no-script-url">&raquo;</a></li>
 		</ul>
 	)
 }

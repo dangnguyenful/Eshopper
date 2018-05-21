@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProductsList from '../components/Modules/ProductsList'
-import { getAllProducts, receiveProducts } from '../actions'
+import { receiveProducts } from '../actions'
 
 const getVisibleProduct = (state) => {
 	var temp = {products: state.getAllProducts.products};
