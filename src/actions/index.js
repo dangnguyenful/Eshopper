@@ -1,5 +1,5 @@
-import { getAllProducts, receiveProducts } from './products'
+import { initFunction, receiveProducts } from './products'
 export {
-	getAllProducts,
+	initFunction,
 	receiveProducts
 };

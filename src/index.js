@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 import reducer from './reducers'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import { getAllProducts } from './actions'
+import { initFunction } from './actions'
 import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
 
@@ -16,7 +16,7 @@ const store = createStore(
 	reducer,
 	applyMiddleware(...middleware)
 )
-store.dispatch(getAllProducts())
+store.dispatch(initFunction())
 const render = () => ReactDOM.render(
 	<Provider store={store}>
 	   	<BrowserRouter>
