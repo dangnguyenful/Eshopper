@@ -20,4 +20,3 @@ const getAllProducts = function(state = initialState, action) {
 }
 
 export default getAllProducts
-
