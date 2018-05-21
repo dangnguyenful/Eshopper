@@ -1,5 +1,5 @@
 import React from 'react'
-const CategoryProducts = () => (
+const ProductCategories = () => (
 	<div className="panel-group category-products" id="accordian">
 		<div className="panel panel-default">
 			<div className="panel-heading">
@@ -107,4 +107,4 @@ const CategoryProducts = () => (
 		</div>
 	</div>
 );
-export default CategoryProducts
+export default ProductCategories

@@ -2,11 +2,11 @@ import React from 'react'
 import PriceRange from './PriceRange'
 import Promotion from './Promotion'
 import BrandsProducts from './BrandsProducts'
-import CategoryProducts from './CategoryProducts'
+import ProductCategories from './ProductCategories'
 const SideBar = () => (
 	<div className="left-sidebar">
 		<h2>Category</h2>
-		<CategoryProducts/>
+		<ProductCategories/>
 		<BrandsProducts/>
 		<PriceRange/>
 		<Promotion/>
