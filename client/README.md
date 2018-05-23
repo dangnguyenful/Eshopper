@@ -1,8 +1,12 @@
-Template source from : http://www.free-css.com/free-css-templates/page203/e-shopper
+## Available Scripts
 
-To run this example:
+In the project directory, you can run:
 
-1. From the repo folder run:  
-   `npm install`
-2. `npm start`
-3. open [http://localhost:8000/](http://localhost:8000/) in the browser
+### `npm run build`
+
+Build prod version.<br>
+
+### `npm start`
+
+Run the client sides.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

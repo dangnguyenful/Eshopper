@@ -2,17 +2,16 @@
 
 In the project directory, you can run:
 
-### `node server`
+### `npm install`
 
-Run the server side.<br>
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+Install npm all sides.<br>
 
-### `npm run client`
+### `npm run build`
 
-Run the client side.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Build prod version.<br>
 
 ### `npm start`
 
 Run the all sides.<br>
+Open [http://localhost:5000](http://localhost:5000) to view it in the api.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
