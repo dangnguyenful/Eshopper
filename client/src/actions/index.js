@@ -1,4 +1,4 @@
-import { getAllProducts, receiveProducts } from './products'
+import { getAllProducts } from './products'
 import { getAllCategories } from './categories'
 
 const initFunction = () => dispatch => {
