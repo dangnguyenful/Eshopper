@@ -6,7 +6,7 @@ const receiveCategories = (categories) => ({
 	categories
 })
 
-const getAllCategories = dispatch => {
+const getAllCategories = () => dispatch => {
 	shop.getCategories(categories => {
 		dispatch(receiveCategories(categories))
 	})

@@ -8,7 +8,7 @@ const receiveProducts = (products, currentPage, itemPerPage) => ({
 	itemPerPage
 })
 
-const getAllProducts = dispatch => {
+const getAllProducts = () => dispatch => {
 	shop.getProducts(products => {
 		dispatch(receiveProducts(products))
 	})
