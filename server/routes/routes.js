@@ -1,7 +1,18 @@
+const shop = require('../api/shop.js');
+const configs = require('../configs/global.js');
+
 const appRouter = function (app) {
-	app.get("/",(req, res) => {
-	  	res.status(200).send("Welcome to our restful API");
+	app.get("/", (req, res) => {
+	  	res.status(200).json({ message: 'Welcome to API page !' });
+	});
+
+	app.get("/products/:categoryId", (req, res) => {
+		shop.getProducts(req.params.categoryId, function (data) {
+			if (!data)
+				res.status(404).json(configs.errorNotFound);
+			res.status(200).json(data);
+		})
 	});
 }
 
-exports.default = appRouter;
+module.exports = appRouter;
