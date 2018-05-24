@@ -1,4 +1,3 @@
-import _products from './products.json'
 import _categories from './categories.json'
 
 const TIMEOUT = 100
