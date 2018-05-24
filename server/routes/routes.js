@@ -3,7 +3,7 @@ const configs = require('../configs/global.js');
 
 const appRouter = function (app) {
 	app.get("/api", (req, res) => {
-	  	res.status(200).json({ message: 'Welcome to API page !' });
+	  	res.status(200).json({ message: configs.welcomeMessage });
 	});
 
 	app.get("/api/products", (req, res) => {
