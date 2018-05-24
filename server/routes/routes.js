@@ -13,6 +13,14 @@ const appRouter = function (app) {
 			res.status(200).json(data);
 		})
 	});
+
+	app.get("/products", (req, res) => {
+		shop.getAllProducts(function (data) {
+			if (!data)
+				res.status(404).json(configs.errorNotFound);
+			res.status(200).json(data);
+		})
+	});
 }
 
 module.exports = appRouter;

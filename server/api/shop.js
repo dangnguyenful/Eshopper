@@ -1,14 +1,20 @@
 const _products = require('./products.json');
 
 const getProducts = function (categoryId, callbackFunc) {
-	var productsArray = _products.filter(function (product){
-		return product.categoryId === parseInt(categoryId);
-	})
 	return callbackFunc({
-		products: productsArray
+		products: _products.filter(function (product){
+			return product.categoryId === parseInt(categoryId);
+		})
+	});
+}
+
+const getAllProducts = function (callbackFunc) {
+	return callbackFunc({
+		products: _products
 	});
 }
 
 module.exports = {
-	getProducts
+	getProducts,
+	getAllProducts
 }
