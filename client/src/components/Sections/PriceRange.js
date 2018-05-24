@@ -13,6 +13,6 @@ export default class PriceRange extends Component {
 					 <b className="pull-left">$ 0</b> <b className="pull-right">$ 600</b>
 				</div>
 			</div>
-		);
-	};
-};
+		)
+	}
+}
