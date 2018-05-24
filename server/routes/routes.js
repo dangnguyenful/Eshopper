@@ -1,23 +1,24 @@
 const shop = require('../api/shop.js');
-const configs = require('../configs/global.js');
+const globalConfigs = require('../configs/global.js');
+const apiConfigs = require('../configs/api.js');
 
 const appRouter = function (app) {
-	app.get("/api", (req, res) => {
-	  	res.status(200).json({ message: configs.welcomeMessage });
+	app.get(apiConfigs.getHomePage, (req, res) => {
+	  	res.status(200).json({ message: globalConfigs.welcomeMessage });
 	});
 
-	app.get("/api/products", (req, res) => {
+	app.get(apiConfigs.getProducts, (req, res) => {
 		shop.getProducts(req.query, function (data) {
 			if (!data)
-				res.status(404).json(configs.errorNotFound);
+				res.status(404).json(globalConfigs.errorNotFound);
 			res.status(200).json(data);
 		})
 	});
 
-	app.get("/api/categories", (req, res) => {
+	app.get(apiConfigs.getCategories, (req, res) => {
 		shop.getCategories(req.query, function (data) {
 			if (!data)
-				res.status(404).json(configs.errorNotFound);
+				res.status(404).json(globalConfigs.errorNotFound);
 			res.status(200).json(data);
 		})
 	});

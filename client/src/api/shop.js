@@ -1,4 +1,5 @@
-import configs from '../configs/global.js'
+import globalConfigs from '../configs/global.js'
+import apiConfigs from '../configs/api.js'
 
 const callApi = (url, successFunc, failFunc, timeout) => setTimeout(() => {
 	fetch(url)
@@ -11,16 +12,16 @@ const callApi = (url, successFunc, failFunc, timeout) => setTimeout(() => {
 			  	throw Error(error);
 			}
 		)
-}, timeout || configs.timeout),
+}, timeout || globalConfigs.timeout),
 getProducts = (cb, timeout) => {
-	callApi('/api/products', data => {
+	callApi(apiConfigs.getProducts, data => {
 		cb(data.products)
 	}, error => {
 		throw Error(error);
 	})
 },
 getCategories = (cb, timeout) => {
-	callApi('/api/categories', data => {
+	callApi(apiConfigs.getCategories, data => {
 		cb(data.categories)
 	}, error => {
 		throw Error(error);

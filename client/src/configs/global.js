@@ -1,4 +1,4 @@
-const configsObj = {
+const globalConfigs = {
 	timeout: 100
 }
-export default configsObj
+export default globalConfigs
