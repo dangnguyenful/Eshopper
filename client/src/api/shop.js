@@ -1,19 +1,34 @@
-import _categories from './categories.json'
+import configs from '../configs/global.js'
 
-const TIMEOUT = 100
+const callApi = (url, successFunc, failFunc, timeout) => setTimeout(() => {
+	fetch(url)
+		.then(res => res.json())
+		.then(
+			(result) => {
+				successFunc(result)
+			},
+			(error) => {
+			  	throw Error(error);
+			}
+		)
+}, timeout || configs.timeout),
+getProducts = (cb, timeout) => {
+	callApi('/api/products', data => {
+		cb(data.products)
+	}, error => {
+		throw Error(error);
+	})
+},
+getCategories = (cb, timeout) => {
+	callApi('/api/categories', data => {
+		cb(data.categories)
+	}, error => {
+		throw Error(error);
+	})
+}
 
 export default {
-	getProducts: (cb, timeout) => setTimeout(() => {
-		fetch("/api/products")
-			.then(res => res.json())
-			.then(
-				(result) => {
-				  	cb(result.products)
-				},
-				(error) => {
-				  	throw Error(error);
-				}
-			)
-	}, timeout || TIMEOUT),
-	getCategories: (cb, timeout) => setTimeout(() => cb(_categories), timeout || TIMEOUT)
+	callApi,
+	getProducts,
+	getCategories
 }

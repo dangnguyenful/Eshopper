@@ -1,4 +1,5 @@
 const _products = require('./products.json');
+const _categories = require('./categories.json');
 
 const getProducts = function (queryObject, callbackFunc) {
 	const categoryId = queryObject.categoryId;
@@ -11,8 +12,15 @@ const getProducts = function (queryObject, callbackFunc) {
 	return callbackFunc({
 		products: _products
 	});
+}, 
+getCategories = function (queryObject, callbackFunc) {
+	return callbackFunc({
+		categories: _categories
+	});
 }
 
+
 module.exports = {
-	getProducts
+	getProducts,
+	getCategories
 }

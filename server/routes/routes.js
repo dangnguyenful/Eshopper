@@ -13,6 +13,14 @@ const appRouter = function (app) {
 			res.status(200).json(data);
 		})
 	});
+
+	app.get("/api/categories", (req, res) => {
+		shop.getCategories(req.query, function (data) {
+			if (!data)
+				res.status(404).json(configs.errorNotFound);
+			res.status(200).json(data);
+		})
+	});
 }
 
 module.exports = appRouter;
