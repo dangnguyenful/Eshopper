@@ -1,16 +1,15 @@
 import {ActionTypes} from '../constants/ActionTypes'
 import shop from '../api/shop'
 
-const receiveProducts = (products, currentPage, itemPerPage) => ({
+const receiveProducts = (products, query) => ({
 	type: ActionTypes.RECEIVE_PRODUCTS,
 	products,
-	currentPage,
-	itemPerPage
+	query
 })
 
-const getProducts = (queries) => dispatch => {
-	shop.getProducts(queries, products => {
-		dispatch(receiveProducts(products))
+const getProducts = (query={}) => dispatch => {
+	shop.getProducts(query, products => {
+		dispatch(receiveProducts(products, query))
 	})
 }
 

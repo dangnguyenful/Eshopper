@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 const Pagination = ({ products, currentPage, itemPerPage, totalPage, receiveProducts }) => {
@@ -28,7 +28,7 @@ const Pagination = ({ products, currentPage, itemPerPage, totalPage, receiveProd
 	} else {
 		nextNumber = currentPage + 1
 	}
-	
+
 	return (
 		<ul className="pagination">
 			<li style={prevBtn} onClick={() => receiveProducts(products, prevNumber, itemPerPage)}><a href="javascript:void(0)">&laquo;</a></li>

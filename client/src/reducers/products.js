@@ -2,17 +2,16 @@ import {ActionTypes} from '../constants/ActionTypes'
 
 const initialState = {
 	products: [],
-	currentPage: 1,
-	itemPerPage: 1
+	query: {}
 };
 
 const getProducts = function(state = initialState, action) {
 	switch (action.type) {
 		case ActionTypes.RECEIVE_PRODUCTS:
 			return {
+				...state,
 				products: action.products,
-				currentPage: action.currentPage,
-				itemPerPage: action.itemPerPage
+				query: action.query
 			}
 		default:
 			return state

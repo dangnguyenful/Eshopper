@@ -4,10 +4,16 @@ import ProductItem from './ProductItem'
 import Pagination from './Pagination'
 import paging from '../../utilities/paging'
 
-const ProductsList = ({ products, currentPage, itemPerPage, receiveProducts }) => {
-  let lastPageNumber = (products.length % itemPerPage) !== 0 ? 1 : 0,
+const ProductsList = ({ products, currentPage, itemPerPage, query }) => {
+  let lastQuery = {
+        ...{},
+        currentPage: query.currentPage ? query.currentPage : currentPage,
+        itemPerPage: query.itemPerPage ? query.itemPerPage : itemPerPage,
+      },
+      lastPageNumber = (products.length % itemPerPage) !== 0 ? 1 : 0,
       totalPage = (products.length/itemPerPage) + lastPageNumber,
-      currentProducts = currentPage && itemPerPage ? paging(products, currentPage, itemPerPage) : products
+      currentProducts = lastQuery.currentPage && lastQuery.itemPerPage ? paging(products, currentPage, itemPerPage) : products
+
   return (
     <div>
       {currentProducts.map(product =>
@@ -16,7 +22,7 @@ const ProductsList = ({ products, currentPage, itemPerPage, receiveProducts }) =
     		{...product}
     		/>
       )}
-      <Pagination currentPage={currentPage} itemPerPage={itemPerPage} totalPage={totalPage} receiveProducts={receiveProducts} products={products}/>
+      <Pagination currentPage={currentPage} itemPerPage={lastQuery.itemPerPage} totalPage={totalPage} products={products}/>
     </div>
   )
 }
@@ -28,10 +34,7 @@ ProductsList.propTypes = {
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired
   }).isRequired).isRequired,
-  currentPage: PropTypes.number,
-  itemPerPage: PropTypes.number,
-  totalPage: PropTypes.number,
-  receiveProducts: PropTypes.func
+  query: PropTypes.object
 }
 
 export default ProductsList
