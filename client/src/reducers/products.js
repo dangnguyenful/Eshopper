@@ -6,7 +6,7 @@ const initialState = {
 	itemPerPage: 1
 };
 
-const getAllProducts = function(state = initialState, action) {
+const getProducts = function(state = initialState, action) {
 	switch (action.type) {
 		case ActionTypes.RECEIVE_PRODUCTS:
 			return {
@@ -19,4 +19,4 @@ const getAllProducts = function(state = initialState, action) {
 	}
 }
 
-export default getAllProducts
+export default getProducts

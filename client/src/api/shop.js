@@ -1,5 +1,6 @@
 import globalConfigs from '../configs/global.js'
 import apiConfigs from '../configs/api.js'
+import serialize from '../utilities/serialize.js'
 
 const callApi = (url, successFunc, failFunc, timeout) => setTimeout(() => {
 	fetch(url)
@@ -13,8 +14,8 @@ const callApi = (url, successFunc, failFunc, timeout) => setTimeout(() => {
 			}
 		)
 }, timeout || globalConfigs.timeout),
-getProducts = (cb, timeout) => {
-	callApi(apiConfigs.getProducts, data => {
+getProducts = (queries, cb, timeout) => {
+	callApi(apiConfigs.getProducts + serialize(queries), data => {
 		cb(data.products)
 	}, error => {
 		throw Error(error);

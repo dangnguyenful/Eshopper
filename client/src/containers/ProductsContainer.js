@@ -3,10 +3,10 @@ import ProductsList from '../components/Modules/ProductsList'
 import { receiveProducts } from '../actions/products'
 
 const applyFilter = (state) => {
-	var allProducts = {products: state.getAllProducts.products};
-	if (state.getAllProducts.currentPage && state.getAllProducts.itemPerPage) {
-		allProducts.currentPage = state.getAllProducts.currentPage;
-		allProducts.itemPerPage = state.getAllProducts.itemPerPage;
+	var allProducts = {products: state.getProducts.products};
+	if (state.getProducts.currentPage && state.getProducts.itemPerPage) {
+		allProducts.currentPage = state.getProducts.currentPage;
+		allProducts.itemPerPage = state.getProducts.itemPerPage;
 	}
 	return allProducts;
 }

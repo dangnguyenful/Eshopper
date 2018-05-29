@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux'
-import getAllProducts from './products'
+import getProducts from './products'
 import getAllCategories from './categories'
 
 export default combineReducers({
-	getAllProducts,
+	getProducts,
 	getAllCategories
 });

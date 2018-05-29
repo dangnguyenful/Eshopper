@@ -8,13 +8,13 @@ const receiveProducts = (products, currentPage, itemPerPage) => ({
 	itemPerPage
 })
 
-const getAllProducts = () => dispatch => {
-	shop.getProducts(products => {
+const getProducts = (queries) => dispatch => {
+	shop.getProducts(queries, products => {
 		dispatch(receiveProducts(products))
 	})
 }
 
 export {
 	receiveProducts,
-	getAllProducts
+	getProducts
 }
