@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import { getProducts } from '../../actions/products'
+import store from '../../store'
 
-const Pagination = ({ products, currentPage, itemPerPage, totalPage, receiveProducts }) => {
+const Pagination = ({ products, currentPage, itemPerPage, totalPage }) => {
 	let totalObject = [],
 		prevBtn = null,
 		nextBtn = null,
@@ -31,21 +33,19 @@ const Pagination = ({ products, currentPage, itemPerPage, totalPage, receiveProd
 
 	return (
 		<ul className="pagination">
-			<li style={prevBtn} onClick={() => receiveProducts(products, prevNumber, itemPerPage)}><a href="javascript:void(0)">&laquo;</a></li>
+			<li style={prevBtn} onClick={() => store.dispatch(getProducts({currentPage: prevNumber, itemPerPage: itemPerPage}))}><a href="javascript:void(0)">&laquo;</a></li>
 			{totalObject.map(page =>
-				<li key={page.number} className={page.active ? 'active' : null} onClick={() => receiveProducts(products, page.number, itemPerPage)}><a href="javascript:void(0)">{page.number}</a></li>
+				<li key={page.number} className={page.active ? 'active' : null}><a href="javascript:void(0)" onClick={() => store.dispatch(getProducts({currentPage: page.number, itemPerPage: itemPerPage}))}>{page.number}</a></li>
 			)}
-			<li style={nextBtn} onClick={() => receiveProducts(products, nextNumber, itemPerPage)}><a href="javascript:void(0)">&raquo;</a></li>
+			<li style={nextBtn} onClick={() => store.dispatch(getProducts({currentPage: nextNumber, itemPerPage: itemPerPage}))}><a href="javascript:void(0)">&raquo;</a></li>
 		</ul>
 	)
 }
 
 Pagination.propTypes = {
-	products: PropTypes.array,
 	currentPage: PropTypes.number,
 	itemPerPage: PropTypes.number,
-	totalPage: PropTypes.number,
-	receiveProducts: PropTypes.func
+	totalPage: PropTypes.number
 }
 
 export default Pagination
