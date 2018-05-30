@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { getProducts } from '../../actions/products'
 import store from '../../store'
 
-const Pagination = ({ products, currentPage, itemPerPage, totalPage }) => {
+const Pagination = ({ currentPage, itemPerPage, totalPage, query }) => {
 	let totalObject = [],
 		prevBtn = null,
 		nextBtn = null,
@@ -33,11 +33,11 @@ const Pagination = ({ products, currentPage, itemPerPage, totalPage }) => {
 
 	return (
 		<ul className="pagination">
-			<li style={prevBtn} onClick={() => store.dispatch(getProducts({currentPage: prevNumber, itemPerPage: itemPerPage}))}><a href="javascript:void(0)">&laquo;</a></li>
+			<li style={prevBtn} onClick={() => store.dispatch(getProducts({currentPage: prevNumber, itemPerPage: itemPerPage, categoryId: query.categoryId}))}><a href="javascript:void(0)">&laquo;</a></li>
 			{totalObject.map(page =>
-				<li key={page.number} className={page.active ? 'active' : null}><a href="javascript:void(0)" onClick={() => store.dispatch(getProducts({currentPage: page.number, itemPerPage: itemPerPage}))}>{page.number}</a></li>
+				<li key={page.number} className={page.active ? 'active' : null}><a href="javascript:void(0)" onClick={() => store.dispatch(getProducts({currentPage: page.number, itemPerPage: itemPerPage, categoryId: query.categoryId}))}>{page.number}</a></li>
 			)}
-			<li style={nextBtn} onClick={() => store.dispatch(getProducts({currentPage: nextNumber, itemPerPage: itemPerPage}))}><a href="javascript:void(0)">&raquo;</a></li>
+			<li style={nextBtn} onClick={() => store.dispatch(getProducts({ currentPage: nextNumber, itemPerPage: itemPerPage, categoryId: query.categoryId }))}><a href="javascript:void(0)">&raquo;</a></li>
 		</ul>
 	)
 }
@@ -45,7 +45,8 @@ const Pagination = ({ products, currentPage, itemPerPage, totalPage }) => {
 Pagination.propTypes = {
 	currentPage: PropTypes.number,
 	itemPerPage: PropTypes.number,
-	totalPage: PropTypes.number
+	totalPage: PropTypes.number,
+	query: PropTypes.object
 }
 
 export default Pagination

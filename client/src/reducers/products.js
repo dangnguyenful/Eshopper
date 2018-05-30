@@ -3,7 +3,7 @@ import {ActionTypes} from '../constants/ActionTypes'
 const initialState = {
 	products: [],
 	query: {}
-};
+}
 
 const getProducts = function(state = initialState, action) {
 	switch (action.type) {

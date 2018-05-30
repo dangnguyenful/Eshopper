@@ -5,4 +5,4 @@ import getAllCategories from './categories'
 export default combineReducers({
 	getProducts,
 	getAllCategories
-});
+})

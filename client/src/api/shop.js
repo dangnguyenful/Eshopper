@@ -16,7 +16,7 @@ const callApi = (url, successFunc, failFunc, timeout) => setTimeout(() => {
 }, timeout || globalConfigs.timeout),
 getProducts = (queries, cb, timeout) => {
 	callApi(apiConfigs.getProducts + serialize(queries), data => {
-		cb(data.products)
+		cb(data)
 	}, error => {
 		throw Error(error);
 	})

@@ -22,7 +22,7 @@ const ProductsList = ({ products, currentPage, itemPerPage, query }) => {
     		{...product}
     		/>
       )}
-      <Pagination currentPage={lastQuery.currentPage} itemPerPage={lastQuery.itemPerPage} totalPage={totalPage} products={products}/>
+      <Pagination currentPage={lastQuery.currentPage} itemPerPage={lastQuery.itemPerPage} totalPage={totalPage} query={query}/>
     </div>
   )
 }

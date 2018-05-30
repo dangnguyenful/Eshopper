@@ -1,14 +1,11 @@
 import { connect } from 'react-redux'
 import ProductsList from '../components/Modules/ProductsList'
-import { receiveProducts } from '../actions/products'
-
-const mapStateToProps = state => (state.getProducts)
-
-const mapDispatchToProps = dispatch => ({
-	receiveProducts: (products, currentPage, itemPerPage) => dispatch(receiveProducts(products, currentPage, itemPerPage))
-})
+const aaa = state => {
+	// console.log(state)
+	return state.getProducts
+}
+const mapStateToProps = state => (aaa(state))
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+	mapStateToProps
 )(ProductsList)
