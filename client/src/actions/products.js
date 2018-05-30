@@ -9,8 +9,6 @@ const receiveProducts = (products, query) => ({
 
 const getProducts = (query={}) => dispatch => {
 	shop.getProducts(query, data => {
-		console.log(query)
-		console.log(data)
 		dispatch(receiveProducts(data.products, data.query))
 	})
 }

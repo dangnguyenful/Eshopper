@@ -6,14 +6,17 @@ import paging from '../../utilities/paging'
 
 const ProductsList = ({ products, currentPage, itemPerPage, query }) => {
   let lastQuery = {
-        ...{},
+        ...query,
         currentPage: query.currentPage ? query.currentPage : currentPage,
-        itemPerPage: query.itemPerPage ? query.itemPerPage : itemPerPage,
+        itemPerPage: query.itemPerPage ? query.itemPerPage : itemPerPage
       },
       lastPageNumber = (products.length % itemPerPage) !== 0 ? 1 : 0,
-      totalPage = (products.length/itemPerPage) + lastPageNumber,
-      currentProducts = lastQuery.currentPage && lastQuery.itemPerPage ? paging(products, currentPage, itemPerPage) : products
-
+      totalPage = query.totalPage ? query.totalPage : Math.floor(products.length/itemPerPage) + lastPageNumber,
+      isPaging = lastQuery.currentPage && lastQuery.itemPerPage,
+      currentProducts = isPaging ? paging(products, currentPage, itemPerPage) : products
+      console.log(query)
+      console.log(lastQuery)
+      console.log(totalPage)
   return (
     <div>
       {currentProducts.map(product =>
@@ -22,7 +25,7 @@ const ProductsList = ({ products, currentPage, itemPerPage, query }) => {
     		{...product}
     		/>
       )}
-      <Pagination currentPage={lastQuery.currentPage} itemPerPage={lastQuery.itemPerPage} totalPage={totalPage} query={query}/>
+      <Pagination currentPage={lastQuery.currentPage} itemPerPage={lastQuery.itemPerPage} totalPage={query.totalPage} query={query}/>
     </div>
   )
 }
