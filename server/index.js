@@ -11,4 +11,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 routes(app);
 
-app.listen(port, () => console.log(globalConfigs.listeningPortMessage + `${port}`));
+app.listen(port, () => console.log(globalConfigs.listeningPortMessage + ` ${port}`));

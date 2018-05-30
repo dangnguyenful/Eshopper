@@ -11,7 +11,7 @@ const getProducts = function(state = initialState, action) {
 			return {
 				...state,
 				products: action.products,
-				query: action.query
+				query: Object.assign({}, state.query, action.query)
 			}
 		default:
 			return state
