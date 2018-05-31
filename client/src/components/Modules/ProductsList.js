@@ -11,12 +11,14 @@ const ProductsList = ({ products, currentPage, itemPerPage, query }) => {
         itemPerPage: query.itemPerPage ? query.itemPerPage : itemPerPage
       },
       lastPageNumber = (products.length % itemPerPage) !== 0 ? 1 : 0,
-      totalPage = query.totalPage ? query.totalPage : Math.floor(products.length/itemPerPage) + lastPageNumber,
-      isPaging = lastQuery.currentPage && lastQuery.itemPerPage,
-      currentProducts = isPaging ? paging(products, currentPage, itemPerPage) : products
-      console.log(query)
-      console.log(lastQuery)
-      console.log(totalPage)
+      totalPage = 0,
+      isPaging = false,
+      currentProducts = []
+
+  lastQuery.totalPage = query.totalPage ? query.totalPage : Math.floor(products.length/itemPerPage) + lastPageNumber
+  lastQuery.isPaging = lastQuery.currentPage && lastQuery.itemPerPage ? true : false
+  currentProducts = lastQuery.isPaging ? paging(products, currentPage, itemPerPage) : products
+
   return (
     <div>
       {currentProducts.map(product =>
@@ -25,7 +27,7 @@ const ProductsList = ({ products, currentPage, itemPerPage, query }) => {
     		{...product}
     		/>
       )}
-      <Pagination currentPage={lastQuery.currentPage} itemPerPage={lastQuery.itemPerPage} totalPage={query.totalPage} query={query}/>
+      <Pagination query={lastQuery}/>
     </div>
   )
 }
